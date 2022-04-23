@@ -7,6 +7,15 @@ public class CounterTool {
         System.out.println("Jimmy: It depends.");
         System.out.println("Oh, ok...");
 
+        System.out.print("Count by: ");
+        int userStep = scan.nextInt();
+
+        System.out.print("Start from: ");
+        int userStart = scan.nextInt();
+
+        System.out.print("End at: ");
+        int userEnd = scan.nextInt();
+
       /* Task 1 – Get integers from the user.
 
 
@@ -21,7 +30,9 @@ public class CounterTool {
                 
         */
         
-
+        for (int i = userStart; i <= userEnd; i += userStep) {
+          System.out.println(i);
+        }
       /* Task 2 – Create a for loop that:
             1. starts from the second number.
             2. stops at the third number. 

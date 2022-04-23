@@ -4,6 +4,13 @@ public class CountingTool {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        System.out.print("What num scan? ");
+        int amount = scan.nextInt();
+
+
+        for (int i = 0; i <= amount; i++) {
+            System.out.print(i + " ");
+        }
 
         /*Task 1 – Choose a number
 

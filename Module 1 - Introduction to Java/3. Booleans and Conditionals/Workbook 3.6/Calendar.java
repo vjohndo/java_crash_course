@@ -17,7 +17,16 @@ public class Calendar {
             //  "Sunday": print ("I'm free!!"); 
             //  "otherwise": print ("that's not a day."); 
 
-        
+        switch(day) {
+            case "Monday": System.out.println("M"); break;
+            case "Tuesday": System.out.println("T"); break;
+            case "Wednesday": System.out.println("W"); break;
+            case "Thursday": System.out.println("Th"); break;
+            case "Friday": System.out.println("F"); break;
+            case "Saturday": System.out.println("Sa"); break;
+            case "Sunday": System.out.println("Su"); break;
+            default: System.out.println("Not a day"); 
+        }
         
 
     }
