@@ -8,12 +8,18 @@ public class SignIn {
         /* Task 1 
             1. Pick up a username and password from the user.
        */
+
+        
+
         Scanner scan = new Scanner(System.in);
         System.out.println("\nWelcome to Javagram! Sign in below\n");
         System.out.print("• Username: ");
         //pick up username
+        String user = scan.nextLine();
+
         System.out.print("• Password: ");
         //pick up password
+        String pass = scan.nextLine();
 
         /* Task 2 
             1. Set up a loop that keeps running while the username OR password is incorrect. 
@@ -23,6 +29,14 @@ public class SignIn {
             2. After they enter the correct information, print: 
                    \nSign in successful. Welcome!
        */
+
+       while (!user.equals(username) || !pass.equals(password)) {
+           System.out.println("NO");
+           System.out.print("USER");
+           user = scan.nextLine();
+           System.out.print("PASS");
+           pass = scan.nextLine();
+       }
 
         scan.close();
 

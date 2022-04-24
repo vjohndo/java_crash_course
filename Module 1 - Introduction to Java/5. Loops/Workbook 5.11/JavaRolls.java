@@ -9,6 +9,9 @@ public class JavaRolls {
               2. Get the user to enter any value
         */
 
+        System.out.println("Let's play Rolling Java. Type anything to start.");
+        scan.nextLine();
+
         /* Task 2: 
               1. Once the user is ready, print: 
                     Great, here are the rules:\n
@@ -19,13 +22,19 @@ public class JavaRolls {
               2. Get the user to enter any value
         */
 
-       int score = 0;
+        System.out.println("Great, here are the rules:\n");
+        System.out.println("\t- If you roll a 6 the game stops.");
+        System.out.println("\t- If you roll a 4 nothing happens.");
+        System.out.println("\t- Otherwise, you get 1 point.\n");
+        System.out.println("You must collect at least 3 points to win. Enter anything to roll:\n");
+        scan.nextLine();
+
+        int score = 0;
       
        /* 
          Task 3
           1. Make a while loop that runs forever
           2. During each run, get them to enter a random value
-          
           
           Task 5
            1. During each run, call the rollDice() function.
@@ -46,6 +55,22 @@ public class JavaRolls {
 
        */
 
+       while (true) {
+        
+         int playerRoll = rollDice();
+         System.out.println("You rolled: " + playerRoll);
+         
+         if (playerRoll == 6) {
+          break;
+         } else if (playerRoll == 4) {
+           score = 0;
+         } else {
+           score++;
+         }
+
+         scan.nextLine();
+         
+       }
       
       /* Task 7
       
@@ -59,6 +84,15 @@ public class JavaRolls {
                   Tough luck, you lose :( 
       */
 
+      System.out.println("\nYour score is: " + score);
+
+      if (score >= 3) {
+        System.out.println("Wow, that's lucky. You win!");
+      } else {
+        System.out.println("Tough luck, you lose!");
+      }
+
+      scan.close();
     }
   
   
@@ -67,6 +101,9 @@ public class JavaRolls {
      * @return randomNumber (int)
      * 
      */ 
-  
+    
+     public static int rollDice() {
+        return (int)(Math.random()*6 + 1);
+     }
   
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Blackjack {
 
-    public static Scanner scan = new Scanner(System.in);
+    public static Scanner scan = new Scanner(System.in); // declared on class level. can be accessed anywhere
 
     public static void main(String[] args) {
         System.out.println("\nWelcome to Java Casino!");

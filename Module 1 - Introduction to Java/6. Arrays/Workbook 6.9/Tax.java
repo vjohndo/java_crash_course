@@ -9,11 +9,17 @@ public class Tax {
          * 
          */
 
+        double[] afterTax = new double[price.length];
+
          /** Task 2:
           * 
           *  Update each element in afterTax to be: price + 13% * price.
           *
           */
+        
+        for (int i = 0; i < price.length; i++) {
+            afterTax[i] = price[i] * 1.13;
+        }
 
          /** Task 3:
           * 
@@ -22,6 +28,10 @@ public class Tax {
           *     The prices after tax are: <after tax prices>
           *
           */
+
+        System.out.println(Arrays.toString(price));
+        System.out.println(Arrays.toString(afterTax));
+        
 
     }
 }

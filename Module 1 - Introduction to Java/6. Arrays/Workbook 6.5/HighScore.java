@@ -7,7 +7,19 @@ public class HighScore {
          *    2. Using a for loop, print the array elements on the same line.
          *         Example – Here are the scores: 14775 48328 7928 27102 21787 21063 38096 42711 32863 23707
          */
+        int[] scores = {randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber(),
+            randomNumber(), randomNumber(), randomNumber(), randomNumber(), randomNumber()};
+        
         int highScore = 0;
+
+        for (int i = 0; i < scores.length; i++) {
+            if (scores[i] > highScore) {
+                highScore = scores[i];
+            }
+            System.out.println(scores[i]);
+        }
+
+        System.out.println("\n\nThe highest score is: " + highScore + ". Give that man a cookie!");        
 
          /** Task 3
           *  
@@ -15,6 +27,7 @@ public class HighScore {
           *   2. println("\n\nThe highest score is: <>. Give that man a cookie!");
 
           */
+        
 
 
     }
@@ -25,6 +38,10 @@ public class HighScore {
      * Inside the function
      *  - returns a random number between 0 and 50000
      */
+
+    public static int randomNumber() {
+        return (int)(Math.random() * 5000);
+    }
     
 
 }
